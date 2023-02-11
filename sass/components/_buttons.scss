@@ -1,7 +1,7 @@
 .btn {
   &:link,
   &:visited {
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 3rem;
@@ -49,5 +49,30 @@
   &--animated {
     animation: moveInBottom 1s ease-out 0.5s;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $colour-primary;
+    display: inline-block;
+    border-bottom: 1px solid $colour-primary;
+    padding: 3px;
+    transition: all 0.5s;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $colour-primary;
+    color: $colour-white;
+    box-shadow: 0 1rem 2rem rgba($colour-black, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($colour-black, 0.2);
+    transform: translateY(0);
   }
 }
